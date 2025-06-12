@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Information Display</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Inter font and general layout */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light gray background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem; /* More vertical padding */
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1000px; /* Slightly wider container */
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            padding: 3rem; /* More padding inside */
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #1a202c;
+            margin-bottom: 2.5rem; /* More space below heading */
+        }
+        h2 {
+            color: #2d3748;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem; /* Space below API name */
+        }
+        .api-section {
+            background-color: #f8fafc; /* Lighter background for each section */
+            border: 1px solid #e2e8f0;
+            border-radius: 0.75rem;
+            padding: 2rem; /* More padding inside section */
+            margin-bottom: 2rem; /* Space between sections */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for sections */
+        }
+        .api-label {
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 0.5rem;
+            display: block; /* Ensure label is on its own line */
+        }
+        .code-block {
+            background-color: #e2e8f0; /* Light gray for code */
+            color: #2d3748;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            overflow-x: auto; /* Allow horizontal scrolling for long lines */
+            white-space: pre-wrap; /* Preserve whitespace and wrap text */
+            word-break: break-all; /* Break words to prevent overflow */
+            margin-top: 0.5rem;
+        }
+        .api-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem; /* Space around image */
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+            .api-section {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container flex flex-col items-center">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-8 text-center">External API Information</h1>
+
+        <!-- Prime Numbers API Section (from image_9996d9.png) -->
+        <div class="api-section w-full">
+            <h2 class="text-3xl font-bold mb-4">Prime Numbers API</h2>
+            <img src="https://placehold.co/800x250/F0F4F8/334155?text=Prime+Numbers+API+Image"
+                 onerror="this.onerror=null;this.src='image_9996d9.png';"
+                 alt="Prime Numbers API Screenshot" class="api-image">
+            <label class="api-label">Request URL:</label>
+            <div class="code-block">http://20.244.56.144/evaluation-service/primes</div>
+            <label class="api-label mt-4">Example Response:</label>
+            <pre class="code-block"><code>{
+  "numbers": [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+}</code></pre>
+        </div>
+
+        <!-- Fibonacci Numbers API Section (from image_9983bc.png) -->
+        <div class="api-section w-full">
+            <h2 class="text-3xl font-bold mb-4">Fibonacci Numbers API</h2>
+            <img src="https://placehold.co/800x250/F0F4F8/334155?text=Fibonacci+Numbers+API+Image"
+                 onerror="this.onerror=null;this.src='image_9983bc.png';"
+                 alt="Fibonacci Numbers API Screenshot" class="api-image">
+            <label class="api-label">Request URL:</label>
+            <div class="code-block">http://20.244.56.144/evaluation-service/fibo</div>
+            <label class="api-label mt-4">Example Response:</label>
+            <pre class="code-block"><code>{
+  "numbers": [ 55,89,144,233,377,610,987 , 1597,2584,4181,6765 ]
+}</code></pre>
+        </div>
+
+        <!-- Even Numbers API Section (from image_9983bc.png and image_999679.png) -->
+        <div class="api-section w-full">
+            <h2 class="text-3xl font-bold mb-4">Even Numbers API</h2>
+            <img src="https://placehold.co/800x250/F0F4F8/334155?text=Even+Numbers+API+Image"
+                 onerror="this.onerror=null;this.src='image_9983bc.png';"
+                 alt="Even Numbers API Screenshot" class="api-image">
+            <label class="api-label">Request URL:</label>
+            <div class="code-block">http://20.244.56.144/evaluation-service/even</div>
+            <label class="api-label mt-4">Example Response:</label>
+            <pre class="code-block"><code>{
+  "numbers": [ 8,10,12,14,16,18,20 , 22 , 24 , 26 , 28 , 30 , 32 , 34 , 36 , 38 , 40 , 42 , 44 , 46 , 48 , 50 , 52,54,56 ]
+}</code></pre>
+        </div>
+
+        <!-- Random Numbers API Section (from image_99839e.png and image_99969b.png) -->
+        <div class="api-section w-full">
+            <h2 class="text-3xl font-bold mb-4">Random Numbers API</h2>
+            <img src="https://placehold.co/800x250/F0F4F8/334155?text=Random+Numbers+API+Image"
+                 onerror="this.onerror=null;this.src='image_99839e.png';"
+                 alt="Random Numbers API Screenshot" class="api-image">
+            <label class="api-label">Request URL:</label>
+            <div class="code-block">http://20.244.56.144/evaluation-service/rand</div>
+            <label class="api-label mt-4">Example Response:</label>
+            <pre class="code-block"><code>{
+  "numbers": [ 2,19,25,7,4,24,17 , 27 , 30 , 21 , 14 , 10,23 ]
+}</code></pre>
+        </div>
+
+    </div>
+</body>
+</html>
